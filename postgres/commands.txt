@@ -1,0 +1,16 @@
+-> up docker
+docker run -p 5432:5432 -v data:/var/lib/postgresql/data postgres
+
+-> create user/role postgres
+docker exec -it xxxxxxxx bash
+su postgres
+createuser -P -s -e usuario
+
+-> connect psql
+docker exec -it xxxxxxxx psql -U postgres
+
+-> pg commands
+\q
+\l
+\dt
+\c database
